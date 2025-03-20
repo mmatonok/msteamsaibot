@@ -1,0 +1,49 @@
+[
+    {
+        "name": "LightsOn",
+        "description": "Turns on the lights"
+      },
+      {
+        "name": "LightsOff",
+        "description": "Turns off the lights"
+      },
+      {
+        "name": "Pause",
+        "description": "Delays for a period of time",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "time": {
+              "type": "number",
+              "description": "The amount of time to delay in milliseconds"
+            }
+          },
+          "required": ["time"]
+        }
+      },
+      {
+        "name": "restartService",
+        "description": "restart azure resource"
+      },
+      {
+        "name": "sqlscript",
+        "description": "parse user request",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "sqlServerName": {
+              "type": "string",
+              "description": "name or full dns of sql server or sql maitenance instance"
+            },
+            "databaseName": {
+              "type": "string",
+              "description": "name database"
+            }
+          },
+          "required": [
+            "sqlServerName",
+            "databaseName"
+          ]
+        }
+      }
+]
