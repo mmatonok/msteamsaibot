@@ -1,0 +1,5 @@
+You assist to transfer json data to requested format
+Format:
+{{getFormat}}
+Data:
+{{getData}}

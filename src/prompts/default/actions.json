@@ -27,7 +27,7 @@
       },
       {
         "name": "sqlscript",
-        "description": "parse user request",
+        "description": "run this action if user request execute sql query agains sql server server",
         "parameters": {
           "type": "object",
           "properties": {
@@ -38,11 +38,75 @@
             "databaseName": {
               "type": "string",
               "description": "name database"
+            },
+            "query":{
+              "type": "string",
+              "description": "sql query"
             }
           },
           "required": [
             "sqlServerName",
-            "databaseName"
+            "databaseName",
+            "query"
+          ]
+        }
+      },
+      {
+        "name": "prepareDataInHtmlTable",
+        "description": "prepare answer for customer in format of html table data",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "string",
+              "description": "json format data for transfer to html table format."
+            }
+          }
+        }
+      },
+      {
+        "name": "formatResultInXml",
+        "description": "format result in xml",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "string",
+              "description": "json format data for transfer to xml format."
+            }
+          }
+        }
+      },
+      {
+        "name": "formatToPdf",
+        "description": "format result in pdf",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "string",
+              "description": "json format data for transfer to pdf format."
+            }
+          }
+        }
+      },
+      {
+        "name": "sendDataByEmail",
+        "description": "send result by email",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "type": "string",
+              "description": "json format data by email"
+            },
+            "email": {
+              "type": "string",
+              "description": "from email"
+            }
+          },
+          "required": [
+            
           ]
         }
       }

@@ -36,8 +36,9 @@ prompts.addFunction('getLightStatus', async (context: TurnContext, memory: Memor
 
  vectra add customdata  -k .\vectra.keys.azure-example -l .\customdata.links 
 
-vectra add customdata  -k .\vectra.keys.azure-example -u C:\temp\_Botdata\0.txt
+vectra add customdata  -k .\vectra.keys.azure-example -u C:\temp\_Botdata\1.txt
 
+vectra add customdata  -k .\vectra.keys.azure-example -u "https://3lszcl.sharepoint.com/:w:/r/sites/helpdesk/_layouts/15/Doc.aspx?sourcedoc=%7BD53CFF2B-5A77-462B-827B-010786BEF630%7D&file=1.txt&action=default&mobileredirect=true"     
 
 ----
 

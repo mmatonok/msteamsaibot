@@ -35,6 +35,12 @@ export function addResponseFormatter(app: Application): void {
         // Send response
         const formattedResponse = output.join('\n');
 
+        console.log("asnwer:", formattedResponse);
+
+        var ret = state.getValue("sqlScript");
+
+        if(ret != "executed")
+        {
          await context.sendActivity({
                     type: ActivityTypes.Message,
                     text: formattedResponse,
@@ -47,8 +53,13 @@ export function addResponseFormatter(app: Application): void {
                       }
                     ]
                   });
+
+            state.setValue("sqlScript", "");
+        }
+        else{
+            console.log("No AI response");
+        }
         
                 return "";
               });
-
 }
