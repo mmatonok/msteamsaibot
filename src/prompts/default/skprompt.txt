@@ -7,6 +7,7 @@ Support first look to custom knowledge base data and offer solution from custome
 
 Support can use to prepare answers different sources. 
 First look to custom files.
+Add source of document for response.
 
 If support decided to go for a data to sql server, here  databases and tables structure:
 
@@ -26,7 +27,8 @@ create table  aspnetUsers (
      enabledMFA bit
 )
 
-2) database smartroom
+2) database smartroom.
+   Users in smartroom table Users are joined to smartidentity table aspnetUser over email column
 
    create table Users(
       id int,
@@ -53,6 +55,28 @@ create table  aspnetUsers (
       SiteId int,
       UserId int
    )
+
+3) cosmo db database smartexchange with documents in json format
+   with cosmos db server: smartexchange.cosmosdb.com
+   
+   {
+       "email": "test@test.com",
+       "cases": [ {
+            id: 'xyz1',
+            title: 'case 1',
+            lawcompany: 'bmc',
+            description: 'company case',
+            documents:[{
+               id: 'xyz1_doc1',
+               path: 'https://azurestorage.com/smartexchange/documents/xyz1_doc.pdf'
+            }]
+            assotiateUsers: [{
+               name: 'mm mm',
+               email: 'test@test.com',
+               type: 'owner'
+            }]
+       }]
+   }
 
 Remember query results.
 ----

@@ -40,6 +40,16 @@ vectra add customdata  -k .\vectra.keys.azure-example -u C:\temp\_Botdata\1.txt
 
 vectra add customdata  -k .\vectra.keys.azure-example -u "https://3lszcl.sharepoint.com/:w:/r/sites/helpdesk/_layouts/15/Doc.aspx?sourcedoc=%7BD53CFF2B-5A77-462B-827B-010786BEF630%7D&file=1.txt&action=default&mobileredirect=true"     
 
+
+3) azure ai search - 8eu daily with 1 index to vectorized!
+
+   consider move to cosmos/sql or postreg db - look on prise
+
+
+Test questions:
+
+could you get me a list of smartexchange cases and list of smartidentity user a@a.com is assigned, merge them and show in html format?
+
 ----
 
 # Microsoft Teams Conversational Bot with AI: Teams Chef

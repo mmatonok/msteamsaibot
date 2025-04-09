@@ -52,6 +52,32 @@
         }
       },
       {
+        "name": "db_cosmo_db_script",
+        "description": "queary azure cosmos db dabase, run this action if user request execute cosmos db sql query",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "cosmosDBServerName": {
+              "type": "string",
+              "description": "name or full dns to azure cosmos db"
+            },
+            "databaseName": {
+              "type": "string",
+              "description": "azure cosmodb database"
+            },
+            "query":{
+              "type": "string",
+              "description": "cosmo query"
+            }
+          },
+          "required": [
+            "cosmosDBServerName",
+            "databaseName",
+            "query"
+          ]
+        }
+      },
+      {
         "name": "prepareDataInHtmlTable",
         "description": "prepare answer for customer in format of html table data",
         "parameters": {
